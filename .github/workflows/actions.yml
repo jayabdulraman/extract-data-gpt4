@@ -1,12 +1,13 @@
 name: run main.py
 
 on:
-  schedule:
-    - cron: '05 00 29 6 6' # At 00:05 on day-of-month 29 and on Saturday in June.
+  push:
+      branches: 
+        - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
 
       - name: checkout repo content
